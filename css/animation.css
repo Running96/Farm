@@ -1,0 +1,205 @@
+.home .img1{
+    position: relative;
+    animation: run1 5s 1;
+}
+.home .img2 {
+    display: none;
+    position: relative;
+    animation: run2 5s 1;
+}
+.home .img3 {
+    display: none;
+    position: relative;
+    animation: run3 5s 1;
+}
+.home .img4 {
+    display: none;
+    position: relative;
+    animation: run4 5s 1;
+}
+
+/*动画效果*/
+@keyframes run1{
+    0%{transform: scale(1.3)}
+    25%{transform: scale(1)}
+    50%{transform: scale(1)}
+    75%{transform: scale(1)}
+    100%{transform: scale(0.6)}
+}
+@keyframes run2{
+    0%{ top: -100px;
+        transform: scale(0.6);}
+    25%{top: 0px;
+        transform: scale(0.6);}
+    50%{transform: scale(1)}
+    75%{transform: scale(1)}
+    100%{transform: scale(0.6)}
+}
+@keyframes run3{
+    0%{ top: -100px;
+        transform: scale(0.6);}
+    25%{top: 0px;
+        transform: scale(0.6);}
+    50%{transform: scale(1)}
+    75%{transform: scale(1)}
+    100%{transform: scale(0.6)}
+}
+@keyframes run4{
+    0%{ top: -100px;
+        transform: scale(0.6);}
+    25%{top: 0px;
+        transform: scale(0.6);}
+    50%{transform: scale(1)}
+    75%{transform: scale(1)}
+    100%{transform: scale(0.6)}
+}
+
+@keyframes slide {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*portfolio*/
+.portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+.portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+.portfolio .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(24,188,156,.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+.portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+.portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+    font-size: 35px;
+}
+.portfolio * {
+    z-index: 2;
+}
+
+/*blog*/
+.view{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 8px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    background: #fff url("../images/bg.jpg") no-repeat center center;
+}
+.view img {
+    transition: all 0.5s ease-out; /*以慢速结束*/
+    filter: alpha(opacity=100);   /*兼容IE透明度*/
+    opacity: 1;
+}
+.blog .view .mask{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color:#3c763d;
+    transform: rotate(0deg) scale(1);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.view h5 {
+    font-size: 25px;
+    background: black;
+    margin: 30px 0 10px;
+    padding: 5px 0;
+    color: white;
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+}
+.view p {
+    color: white;
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+}
+.view a.info {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    background: black;
+    line-height: 30px;
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
+}
+.view:hover img {
+    transform: rotate(720deg) scale(0);
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.blog .view:hover .mask {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+    transition-delay: 0.4s;
+}
+.view:hover h5 {
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+}
+.view:hover p {
+    transform: translateY(0px);
+    transition-delay: 0.6s;
+}
+.view:hover a.info {
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+}
+
+/*.container .row{*/
+    /*animation: run 4s linear;*/
+/*}*/
+
+/*@keyframes fall{*/
+    /*0%{top: 200px}*/
+    /*100%{*/
+        /*top: 0px;*/
+        /*!*transform: rotate(360deg);*!*/
+    /*}*/
+/*}*/
+
+.animation{
+    animation: run 0.5s linear;
+}
+
+@keyframes run {
+    0%{top:100px;}
+    100%{top:0;}
+}

@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+li{
+    list-style: none;
+}
+a:link,a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+    color: white;
+}
+h3{
+    margin-top: 0;
+}
+/*导航条部分*/
+.navbar-default .navbar-brand{
+    color: white;
+    font-weight: 500;
+}
+.navbar-default .navbar-brand:hover{
+    color: greenyellow;
+}
+#nav-home .nav-word{
+    color: white;
+}
+#nav-home .nav-word:hover{
+    background: #e3e3e3;
+    color: rgba(153, 153, 153, 0.8);
+}
+
+/*Home页面部分*/
+.home{
+    position: relative;
+}
+.home .home-words{
+    z-index: 1;
+    position: absolute;
+    bottom: 40%;
+}
+
+.home .home-words .home-p{
+    color: #c4c4c4;
+    /*width: 170px;*/
+    height: 20px;
+    /*overflow: hidden;*/
+    margin: 0 auto;
+}
+.transP{
+    display: block;
+    color: white;
+    width: 170px;
+    height: 20px;
+    overflow: hidden;
+    /*margin: 0 auto;*/
+    animation: trans2 5s linear;
+    /*z-index: 1;*/
+}
+
+/*@keyframes trans {*/
+    /*0%{*/
+        /*width: 0%;*/
+        /*border-bottom: 2px solid white;*/
+    /*}*/
+    /*100%{*/
+        /*width: 170px;*/
+        /*border-bottom: 2px solid white;*/
+    /*}*/
+/*}*/
+@keyframes trans2 {
+    0%{
+        color: white;
+        border-bottom: 2px solid white;
+    }
+    50%{color: #fbfc13;}
+    100%{
+        color: white;
+        border-bottom: 2px solid white;
+    }
+}
+.home .home-words small{
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+/*about部分*/
+section {
+    padding:100px 0;
+}
+section.about {
+    background:url(../images/fog.jpg) no-repeat;
+    background-attachment:fixed;/*背景图像固定不动*/
+    background-position:center;  /*背景图像的起始位置为浏览器窗口的中部*/
+    background-size:100% 100%;
+}
+section.about h3 {
+     margin: 0;
+     font-family: 'Poiret One', cursive;
+     font-size:3em;
+     padding-bottom: 50px;
+     color:#fff;
+ }
+section.about p {
+    font-size: 19px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+/*about-first && about-third*/
+.about-first,.about-third{
+    padding: 50px 0;
+    background: url("../images/leaf.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+/*about-first && about-second && about-third*/
+p.lead{
+    color: #283300;
+}
+h3.section-heading{
+    /*font-family: 'Poiret One',cursive;*/
+    font-size: 28px;
+    font-weight: 100;
+    color: #283300;
+}
+@media (max-width: 1000px){
+    h3.section-heading {
+        font-size: 22px;
+    }
+    p.lead{
+        font-size: 16px;
+    }
+}
+.section-heading-spacer{
+    width: 200px;
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+.grid {
+    text-align: center;
+}
+.grid li {
+    display: inline-block;
+    /*width: 460px;*/
+    width: 100%;
+    position: relative;
+}
+.grid figure {
+    position: relative;
+}
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+.grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(44, 78, 44, 0.21);
+    color: #1b8a1b;
+}
+.grid figcaption h3 {
+    font-family: 'Poiret One', cursive;
+    margin: 0;
+    padding: 0;
+    font-size:2em;
+    color: #fff;
+}
+.cs-style figure img {
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
+.cs-style:hover figure img {
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+}
+.cs-style figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.cs-style:hover figure figcaption {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*about-second*/
+.about-second{
+    padding: 50px 0;
+    background: url("../images/rain.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.about-second h3.section-heading{
+    font-size: 28px;
+    font-weight: 100;
+    color: white;
+}
+.about-second .section-heading-spacer{
+    width: 200px;
+    borrder-top: 1px solid white;
+}
+.about-second p.lead{
+    color: white;
+}
+
+/*service部分*/
+.services{
+    background: url("../images/blur.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+h3{
+    display: block;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 50px;
+}
+.services .outer-wrap{
+    width: 220px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.services .outer-wrap .image img{
+    transform: scale(1.2);
+    /*opacity: 0.7;*/
+}
+.services .outer-wrap .inner-wrap{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    overflow: hidden;
+    top: 20px;
+    left: 20px;
+    /*opacity: 1;*/
+    border-radius: 50%;
+    background: #fff url("../images/bg.jpg") no-repeat center center;
+    z-index: 0;
+}
+.inner-wrap img{
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    border-radius: 50%;
+}
+.outer-wrap .hover-content1{
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #1d4460;
+    transform: rotate(0deg) scale(1.2);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+    border-radius: 50%;
+}
+.outer-wrap .hover-content1 h4{
+    color: white;
+    margin: 50px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+}
+.outer-wrap .hover-content1 hr{
+    width: 120px;
+    height: 2px;
+    margin: 0 auto;
+}
+.outer-wrap .hover-content1 p{
+    color: white;
+    font-size: 12px;
+    padding: 2px;
+    margin: 0;
+    text-align: center;
+}
+.outer-wrap:hover .hover-content1{
+    opacity: 1;
+    /*transform: translateY(0px) rotate(360deg);*/
+    transition-delay: 1s;
+    transform: scale(0.85);
+}
+.services .outer-wrap:hover .inner-wrap img{
+    animation: scale 2s 1;
+}
+@keyframes scale {
+    0%{transform: scale(1)}
+    100%{transform: scale(0);}
+}
+.services h4{
+    padding: 20px 0;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Poiret One',cursive;
+}
+.services p{
+    padding: 10px 0 30px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*portfolio*/
+.portfolio{
+    background: url("../images/sky.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.portfolio img{
+    width: 98%;
+    margin-bottom: 40px;
+}
+
+/*模板样式*/
+#portfolio * {
+    z-index: 2;
+}
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+.portfolio-modal .modal-content {
+    padding: 10px 0 35px;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.portfolio-modal .modal-content h3 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Poiret One', cursive;
+    color: #fff;
+}
+.portfolio-modal .modal-content img {
+    margin:0 0 30px;
+    width:100%;
+}
+.portfolio-modal .modal-content p {
+    font-family: 'Raleway', sans-serif;
+    font-size:17px;
+    padding:30px 0;
+    color: #fff;
+}
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.copyrights{
+    text-indent:-9999px;
+    height:0;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+}
+.portfolio-modal .close-modal:hover {
+    opacity: .7;
+}
+.modal-content {
+    background-color:rgba(0, 29, 1, 0.7);
+}
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #fff;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.blog{
+    background: url("../images/blur.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.blog p.p1{
+    font-size: 15px;
+    color: white;
+    display: block;
+    margin: 10px auto;
+}
+.blog a h4{
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: 500;
+    height: 90px;
+    color: white;
+    text-decoration: none;
+}
+.blog a h4:hover{
+    color: green;
+}
+.blog p.p2{
+    font-size: 16px;
+    padding: 0 0 10px;
+    color: white;
+}
+
+/*Contact*/
+.contact{
+    background: url("../images/grass.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.contact iframe{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2%;
+}
+.contact h4{
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    padding: 20px 0;
+    color: white;
+}
+.contact p{
+    font-size: 17px;
+    padding: 10px 0;
+    color: white;
+}
+
+.contact-form{
+    background: url("../images/green.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.contact-form p{
+    font-size: 17px;
+    padding: 0 0 40px;
+    color: white;
+}
+.contact-form .form-group{
+    margin-bottom: 15px;
+}
+.contact-form .form-control{
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height: 50px;
+    padding: 16px 12px;
+    font-size: 19px;
+    display: block;
+}
+.contact-form .form-group label{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+.contact-form textarea.form-control{
+    width: 100%;
+    height: auto;
+}
+.contact-form .btn{
+    color: white;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    border: 2px solid white;
+    border-radius: 20%;
+    background: 0 0;
+    margin: 10px auto;
+    padding: 5px 30px;
+    display: block;
+}
+.contact-form .btn:hover{
+    background: #e3e3e3;
+    color: #283300;
+}
+
+/*footer*/
+footer{
+    padding-top: 50px;
+    background: #475025;
+}
+.footer-top h4{
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    padding-bottom: 35px;
+    color: whitesmoke;
+}
+footer p{
+    color: whitesmoke;
+}
+.footer-top .list-item{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 20px 100px;
+}
+.footer-top .list-inline{
+    width: 300px;
+    margin: 10px auto;
+}
+.footer-top .list-inline li{
+    display: inline-block;
+}
+.footer-top .btn-social{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+.footer-top .btn-social:hover{
+    background: white;
+}
+.footer-top .btn-social:hover i{
+    color: #2eb77d;
+}
+.footer-top .btn-outline{
+   margin-top: 15px;
+    color: white;
+    background: 0 0;
+}
+footer .footer-below{
+    padding: 25px 0;
+    background-color: rgb(53,58,34);
+}
+footer .footer-below span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
